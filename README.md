@@ -32,9 +32,8 @@ The app is fully responsive using Tailwind CSS
 ### Before running the app, make sure you install the following dependencies :-
 
 1. react - Frontend library
-2. react-dom - Rendering React components
-3. @react-google-maps/api - Integrates Google Maps with React
-4. tailwindcss - Utility-first CSS framework
-5. autoprefixer - Required for Tailwind CSS
-6. postcss - Required for Tailwind CSS
-7. vite - Fast development server and build tool
+2. @react-google-maps/api - Integrates Google Maps with React
+3. tailwindcss - Utility-first CSS framework
+4. autoprefixer - Required for Tailwind CSS
+5. postcss - Required for Tailwind CSS
+6. vite - Fast development server and build tool
