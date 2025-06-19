@@ -23,7 +23,7 @@ The app is fully responsive using Tailwind CSS
    3. npx tailwindcss init -p
 
 
-3. ( .env.local file ) in this file you add your own google api key 
+3. [.env.local file](.env.local) in this file you add your own google api key 
    ```bash
    VITE_GOOGLE_MAPS_API_KEY = YOUR_API_KEY
 
