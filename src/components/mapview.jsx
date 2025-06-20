@@ -2,7 +2,7 @@ import {GoogleMap, Marker, DirectionsRenderer} from "@react-google-maps/api";
 
 function Map({ setmap, direction }) {
     return (
-        <div className='absolute lg:top-0 top-1/2 h-full w-full lg:mt-0 mt-16'>
+        <div className='absolute lg:top-0 h-full w-full mt-0 bg-blue-700'>
             <GoogleMap center={{ lat: 19.1, lng: 72.9 }}
                 zoom={3}
                 mapContainerStyle={{ width: '100%', height: '100%' }}

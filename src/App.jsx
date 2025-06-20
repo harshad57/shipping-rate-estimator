@@ -12,6 +12,7 @@ function App() {
   const [weight, setweight] = useState(0);
   const [ship, setship] = useState('Standard');
   const [totalCost, settotalCost] = useState('');
+  const [open, setOpen] = useState(false);
 
   const originref = useRef();
   const destinationref = useRef();
@@ -64,8 +65,19 @@ function App() {
 
   return (
     <div className="flex justify-center lg:justify-start">
-      <div className='flex flex-col items-center relative z-10 backdrop-blur-lg p-4 rounded-b-2xl border-2 lg:border-gray-300 shadow-lg w-full lg:w-auto bg-slate-300 lg:bg-transparent border-black'>
-        <div className='mt-4 text-3xl text-center font-bold lg:text-slate-300 text-black'>Calculate Shipping Rate</div>
+
+      <button className="bg-black py-0.5 px-4 mt-2 rounded-xl text-xl focus:outline-none z-20 lg:hidden" onClick={() => setOpen(!open)}>
+        <span className={`text-white inline-block transition-transform duration-300 ${
+            open ? "rotate-180" : ""
+          }`}>
+          ▼
+        </span>
+      </button>
+
+      <div className={`flex-col absolute z-10 backdrop-blur-lg p-4 rounded-b-2xl border-2 lg:border-gray-300 shadow-lg  bg-slate-300 lg:bg-transparent border-black w-full lg:w-auto transition-all duration-700 ${
+        open ? 'top-0 lg:top-0' : '-top-full lg:top-0'
+      }`}>
+        <div className='mt-8 text-3xl text-center font-bold lg:text-slate-300 text-black'>Calculate Shipping Rate</div>
         <Input originref={originref} destinationref={destinationref} />
         <ShippingInfo distance={distance} duration={duration} map={map} setship={setship} ship={ship} weight={weight} setweight={setweight} totalCost={totalCost} calculateRoute={calculateRoute} clearRoute={clearRoute} />
       </div>
